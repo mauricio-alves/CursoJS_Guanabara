@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfândega</title>
+</head>
+
+<body>
+  <h1>Alfândega do aeroporto</h1>
+  Bem vindo, você é de: <input type="text" name="p1" id="p1">
+  <input type="button" value="verificar" onclick="check()">
+  <div id="res"></div>
+
+  <script>
+    function check() {
+      var país = document.querySelector("#p1")
+      var res = document.querySelector("#res")
+      res.innerHTML = `Você é do ${país.value}`
+      if (país.value == "Brasil") {
+        res.innerHTML += `<p>Sua entrada no Brasil é permitida.</p>`
+      } else {
+        res.innerHTML += `<p>Sua entrada no Brasil é proibida.</p>`
+      }
+      res.innerHTML += `<p>Tenha uma boa viagem!</p>`
+    }
+  </script>
+</body>
+
+</html>
